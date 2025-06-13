@@ -1,5 +1,5 @@
-const API_BASE_URL = "http://10.84.84.196:83/api"; ////dev
-// const API_BASE_URL = 'http://10.84.15.15:83/api'; //// prod
+const API_BASE_URL = "http://lienDev/api"; ////dev
+// const API_BASE_URL = 'http://lienProd/api'; //// prod
 
 export const apiRequest = {
   async request(endpoint, method = "GET", data = null, includeToken = false) {
