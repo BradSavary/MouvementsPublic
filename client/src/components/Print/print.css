@@ -1,0 +1,87 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .print-container, .print-container * {
+    visibility: visible;
+  }
+  
+  .print-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10mm;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* Cacher les boutons d'impression lors de l'impression */
+  .print-buttons {
+    display: none !important;
+  }
+
+  /* Style des tables pour l'impression avec gestion de largeur */
+  table {
+    width: 100% !important;
+    border-collapse: collapse;
+    table-layout: fixed !important; /* Force table à respecter la largeur */
+    page-break-inside: auto;
+  }
+
+  th, td {
+    padding: 3mm 1mm !important;
+    border-bottom: 0.1mm solid #e5e7eb;
+    text-align: left;
+    overflow: visible; /* Éviter la troncation */
+    word-break: break-word !important; /* Couper les mots qui sont trop longs */
+    font-size: 8pt !important; /* Police plus petite pour impression */
+    white-space: normal !important; /* Autoriser le retour à la ligne */
+  }
+
+  /* Largeurs spécifiques pour différentes colonnes */
+  .col-date {
+    width: 15% !important;
+  }
+  
+  .col-type {
+    width: 10% !important;
+  }
+  
+  .col-name {
+    width: 20% !important;
+  }
+  
+  .col-location {
+    width: 55% !important;
+  }
+
+  /* Paramètres de mise en page */
+  @page {
+    size: auto;
+    margin: 10mm;
+  }
+
+  /* Style spécifique pour l'orientation paysage */
+  @page landscape {
+    size: landscape;
+  }
+  
+  .landscape-print {
+    page: landscape;
+  }
+}
+
+/* Styles pour la prévisualisation */
+.print-container {
+  background: white;
+  padding: 20px;
+}
+
+.print-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}

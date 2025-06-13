@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+@layer base{
+
+  :root{
+    --clr-red:"#377E9A"
+  }
+}
+
+@layer utilities{
+  .text-custom-red{
+    color: var(--clr-red);
+  }
+}
