@@ -283,21 +283,21 @@ private function determineUserService($username, $userInfo) {
     error_log("Détermination du service pour: $username");
     
     // 1. Utilisateurs du service "Accueil"
-    $accueilUsers = ["jriffaud", "cgauduffe", "cbirbaud"];
+    $accueilUsers = [];
     if (in_array($username, $accueilUsers)) {
         error_log("$username attribué au service Accueil");
         return "Accueil";
     }
     
     // 2. Utilisateurs du service "Admin"
-    $adminUsers = ["jdauge", "nastor", "tcoussiere", "bsavary"];
+    $adminUsers = [];
     if (in_array($username, $adminUsers)) {
         error_log("$username attribué au service Admin");
         return "Admin";
     }
     
     // 3. Utilisateurs du service "Cadre de sante"
-    $cadreUsers = ["adairon", "clesot", "cmesrine", "jcoudert", "krougerie", "mlmazurier", "ofournier"];
+    $cadreUsers = [];
     if (in_array($username, $cadreUsers)) {
         error_log("$username attribué au service Cadre de Santé");
         return "Cadre de Santé";
